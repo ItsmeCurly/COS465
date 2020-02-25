@@ -1,0 +1,24 @@
+{
+  "name": "COS465",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsmeCurly/COS465.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItsmeCurly/COS465/issues"
+  },
+  "homepage": "https://github.com/ItsmeCurly/COS465#readme",
+  "dependencies": {
+    "d3": "^5.15.0",
+    "react": "^16.12.0"
+  }
+}

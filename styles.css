@@ -1,14 +1,10 @@
 body {
-  margin: 0px;
-  overflow: hidden;
+  background-color: #3c3c3c;
+  color: #cfcfcf;
 }
 
-.sphere {
-  fill: #4242e4;
-}
-
-.country {
-  fill: lightgreen;
-  stroke: black;
-  stroke-opacity: 0.1;
+div {
+  line-height: 15px;
+  margin-bottom: 3px;
+  background-color: grey;
 }

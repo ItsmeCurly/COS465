@@ -6,5 +6,12 @@ body {
 div {
   line-height: 15px;
   margin-bottom: 3px;
-  background-color: grey;
+  background-color: white;
+}
+
+.axis, .text {
+  color: grey
+}
+
+.bar {
 }

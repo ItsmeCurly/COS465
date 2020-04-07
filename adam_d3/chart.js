@@ -16,7 +16,7 @@ d3.csv('..\\data\\course_grades.csv')
             d._term = "20" + d.Term.slice(0,2) + "_" + d.Term.slice(2,3)
             d._grade = parseGrade(d.Grade)
         });
-        
+
         var selectedData = data.filter(function(d) {
             return d["Course ID"] == "022541";
         })
@@ -53,7 +53,7 @@ d3.csv('..\\data\\course_grades.csv')
             .append("g")
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
-        
+
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x));
@@ -70,7 +70,7 @@ d3.csv('..\\data\\course_grades.csv')
             .attr("stroke-width", 3.0)
             .attr("d", d3.line()
                 .x(function (d) {
-                    return x(d._term) 
+                    return x(d._term)
                 })
                 .y(function (d) {
                     console.log(d._term + " " +  d._totalgrade)

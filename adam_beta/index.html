@@ -98,10 +98,10 @@
             });
 
             var selectedData = data.filter(function (d) {
-                return d["_count"] < 10;
+                return d["_count"] < 25;
             })
 
-            console.log(selectedData)
+            //console.log(selectedData)
             temp_nodes = []
             selectedData.forEach(function (d) {
                 if (!temp_nodes.includes(d._firstermplan)) temp_nodes.push(d._firstermplan);
@@ -155,7 +155,10 @@
                 graph.nodes.push(d)
             });
 
-            console.log(graph.nodes)
+            //free memory
+            temp_nodes = []
+
+            //console.log(graph.nodes)
 
             // loop through each link replacing the text with its index from node
             graph.links.forEach(function (d, i) {
@@ -163,19 +166,20 @@
                 graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
             });
 
-            // now loop through each nodes to make nodes an array of objects
-            // rather than an array of strings
+            //create the json format
             graph.nodes.forEach(function (d, i) {
                 graph.nodes[i] = { "name": d };
             });
-
-            console.log(graph.nodes)
-            console.log(graph.links)
 
             /*
             will have to compile all similar node traversals
             (ie those that go to same location)
             */
+
+            console.log(graph.nodes)
+            console.log(graph.links)
+
+
 
             var chart = d3.select("#chart").append("svg").chart("Sankey.Path");
 
@@ -193,8 +197,10 @@
                 .iterations(0)
                 .draw(graph);
             function label(node) {
-                console.log(node.name)
-                return node.name.replace(/\s*\(.*?\)$/, '');
+                //console.log(node.name)
+                //console.log(node.name.slice(0, node.name.indexOf("_")));
+                name = node.name.replace(/\s*\(.*?\)$/, '');
+                return name.slice(0, name.indexOf("_"));
             }
             function color(node, depth) {
                 if (depth > 0 && node.targetLinks && node.targetLinks.length == 1) {

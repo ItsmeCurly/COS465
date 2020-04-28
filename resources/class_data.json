@@ -1,0 +1,103 @@
+{
+    "COS 125": {
+        "prereq": [],
+        "year": "1",
+        "yPos": "0"
+    },
+    "COS 140": {
+        "prereq": [],
+        "year": "1"
+    },
+    "COS 135": {
+        "prereq": [
+            "COS 140",
+            "COS 125"
+        ],
+        "year": "2"
+    },
+    "COS 225": {
+        "prereq": [
+            "COS 125"
+        ],
+        "year": "2",
+        "yPos": "0"
+    },
+    "COS 226": {
+        "prereq": [
+            "COS 225"
+        ],
+        "year": "3",
+        "yPos": "0"
+    },
+    "COS 250": {
+        "prereq": [],
+        "year": "3"
+    },
+    "COS 235": {
+        "prereq": [
+            "COS 135"
+        ],
+        "year": "4"
+    },
+    "COS 350": {
+        "prereq": [
+            "COS 226",
+            "COS 250"
+        ],
+        "year": "4",
+        "yPos": "0"
+    },
+    "COS 301": {
+        "prereq": [
+            "COS 226",
+            "COS 250"
+        ],
+        "year": "5"
+    },
+    "COS 331": {
+        "prereq": [
+            "COS 226",
+            "COS 235"
+        ],
+        "year": "5"
+    },
+    "COS 420": {
+        "prereq": [
+            "COS 331"
+        ],
+        "year": "6"
+    },
+    "COS 430": {
+        "prereq": [
+            "COS 235",
+            "COS 331"
+        ],
+        "year": "6"
+    },
+    "COS 397": {
+        "prereq": [
+            "COS 420"
+        ],
+        "year": "7"
+    },
+    "COS 490": {
+        "prereq": [
+            "COS 331"
+        ],
+        "year": "7",
+        "yPos": "0"
+    },
+    "COS 497": {
+        "prereq": [
+            "COS 397"
+        ],
+        "year": "8"
+    },
+    "COS 451": {
+        "prereq": [
+            "COS 350"
+        ],
+        "year": "8",
+        "yPos": "0"
+    }
+}

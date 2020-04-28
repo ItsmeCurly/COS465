@@ -98,7 +98,7 @@
             });
 
             var selectedData = data.filter(function (d) {
-                return d["_count"] < 25;
+                return d["_count"] < 32;
             })
 
             //console.log(selectedData)
@@ -176,37 +176,36 @@
             (ie those that go to same location)
             */
 
-            console.log(graph.nodes)
-            console.log(graph.links)
+            console.log(graph)
 
-            var chart = d3.select("#chart").append("svg").chart("Sankey.Path");
+            // var chart = d3.select("#chart").append("svg").chart("Sankey.Path");
 
-            chart
-                .name(label)
-                .colorNodes(function (name, node) {
-                    return color(node, 1) || colors.fallback;
-                })
-                .colorLinks(function (link) {
-                    return color(link.source, 4) || color(link.target, 1) || colors.fallback;
-                })
-                .nodeWidth(12)
-                .nodePadding(10)
-                .spread(true)
-                .iterations(0)
-                .draw(graph);
-            function label(node) {
-                //console.log(node.name)
-                //console.log(node.name.slice(0, node.name.indexOf("_")));
-                name = node.name.replace(/\s*\(.*?\)$/, '');
-                return name.slice(0, name.indexOf("_"));
-            }
-            function color(node, depth) {
-                if (depth > 0 && node.targetLinks && node.targetLinks.length == 1) {
-                    return color(node.targetLinks[0].source, depth - 1);
-                } else {
-                    return null;
-                }
-            }
+            // chart
+            //     .name(label)
+            //     .colorNodes(function (name, node) {
+            //         return color(node, 1) || colors.fallback;
+            //     })
+            //     .colorLinks(function (link) {
+            //         return color(link.source, 4) || color(link.target, 1) || colors.fallback;
+            //     })
+            //     .nodeWidth(12)
+            //     .nodePadding(10)
+            //     .spread(true)
+            //     .iterations(0)
+            //     .draw(graph);
+            // function label(node) {
+            //     //console.log(node.name)
+            //     //console.log(node.name.slice(0, node.name.indexOf("_")));
+            //     name = node.name.replace(/\s*\(.*?\)$/, '');
+            //     return name.slice(0, name.indexOf("_"));
+            // }
+            // function color(node, depth) {
+            //     if (depth > 0 && node.targetLinks && node.targetLinks.length == 1) {
+            //         return color(node.targetLinks[0].source, depth - 1);
+            //     } else {
+            //         return null;
+            //     }
+            // }
             function parse_outcome(o) {
                 if (o == 1) return "Degree in SCIS";
                 else if (o == 2) return "Degree in other major";

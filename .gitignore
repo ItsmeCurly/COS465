@@ -152,6 +152,11 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/windows,visualstudiocode,jspm,node
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
+__pycache__
 
-data/cos_students.csv
-data/course_grades.csv
+*.csv
+
+data/*
+!data/data.txt
+
+env
